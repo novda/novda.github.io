@@ -10,7 +10,7 @@ body {
 .mailto {
   color: #37352f;
   font: 24px/1.5 Helvetica, sans-serif;
-  width: 193px;
+  width: 8em;
 }
 
 .mailto:hover {
