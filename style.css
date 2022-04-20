@@ -2,57 +2,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   margin: 0;
 
-  background: #f7f6f3;;
 }
 
-.container {
-  display: flex;
-  padding: 20px;
-}
 
 .mailto {
   color: #37352f;
   font: 24px/1.5 Helvetica, sans-serif;
+  width: 193px;
 }
 
 .mailto:hover {
   cursor: pointer;
-  text-decoration: underline;
-}
-
-.popup {
-  position: absolute;
-  visibility: hidden;
-  width: 180px;
-  background-color: #555;
-  border-radius: 4px;
-  color: #fff;
-  font: 14px/1.5 Helvetica, sans-serif;
-  text-align: center;
-  bottom: 45%;
-}
-
-.popup.show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1 ;}
-}
-
-@media print {
-  body {
-    background: white;
-  }
 }
