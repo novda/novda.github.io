@@ -30,7 +30,7 @@ function App() {
         ))}
       </div>
       <div className="Contacts">
-        <a href="mailto:z@adhamov.com}" target="_blank" className="Mail" rel="noreferrer">📧mail</a>
+        <a href="mailto:z@adhamov.com" target="_blank" className="Mail" rel="noreferrer">📧mail</a>
         <a href=" https://telegram.me/zahadhamov" target="_blank" className="Telegram">✈️telegram</a>
         <a href="https://github.com/novda" target="_blank" className="Github" rel="noreferrer">👨‍💻github </a>
       </div>
