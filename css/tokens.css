@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Design Tokens — Single source of truth
+   ========================================================================== */
+
+:root {
+  /* Colors — warm neutral palette */
+  --bg-primary: #F5F0E8;
+  --bg-secondary: #EDE8DF;
+  --bg-card: rgba(255, 255, 255, 0.6);
+  --text-primary: #1A1917;
+  --text-secondary: #6B6760;
+  --text-muted: #9B9690;
+  --accent: #C96442;
+  --accent-hover: #B5522F;
+  --border: rgba(26, 25, 23, 0.1);
+  --border-hover: rgba(26, 25, 23, 0.25);
+
+  /* Typography */
+  --font-display: 'Crimson Pro', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-2xl: 120px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-full: 100px;
+
+  /* Transitions */
+  --transition: 0.2s ease;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --bg-primary: #1A1917;
+  --bg-secondary: #242320;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text-primary: #F5F0E8;
+  --text-secondary: #9B9690;
+  --text-muted: #6B6760;
+  --accent: #E07A56;
+  --accent-hover: #C96442;
+  --border: rgba(245, 240, 232, 0.1);
+  --border-hover: rgba(245, 240, 232, 0.25);
+}
