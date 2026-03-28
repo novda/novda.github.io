@@ -1,14 +1,239 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./style.css" />
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zsha</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Zaha — Software Engineer</title>
+    <meta name="description" content="Personal website of Zahiriddin Adhamov — software engineer." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adhamov.com/" />
+    <meta property="og:title" content="Zaha — Software Engineer" />
+    <meta property="og:description" content="Software engineer. Currently at Timestripe." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/novda/temp/main/adhamov_opengraph.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./adhamov/public/adhamov_icon.png" />
+    <link rel="apple-touch-icon" href="./adhamov/public/adhamov_icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/tokens.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/sections.css" />
+
+    <!-- Theme + i18n (load early to prevent flash) -->
+    <script src="./js/theme.js"></script>
+    <script src="./js/i18n.js"></script>
   </head>
+
   <body>
-    <div class="container">
-      <input class="mailto" onClick="this.setSelectionRange(0, this.value.length)" value="z@adhamov.com" />
+    <!-- ── Navigation ──────────────────────────────────────────────────── -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="#" class="nav__logo">z.</a>
+        <div class="nav__links">
+          <a href="#about" class="nav__link" data-i18n="nav.about">About</a>
+          <a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
+          <a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a>
+          <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+          <div class="lang-switcher">
+            <button class="lang-switcher__btn active" data-lang="en">EN</button>
+            <button class="lang-switcher__btn" data-lang="ru">RU</button>
+            <button class="lang-switcher__btn" data-lang="uz">UZ</button>
+          </div>
+          <button class="nav__theme-toggle" aria-label="Toggle theme">☾</button>
+        </div>
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ── Mobile menu ─────────────────────────────────────────────────── -->
+    <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <a href="#about" class="mobile-menu__link" data-i18n="nav.about">About</a>
+      <a href="#experience" class="mobile-menu__link" data-i18n="nav.experience">Experience</a>
+      <a href="#projects" class="mobile-menu__link" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a>
+      <div class="lang-switcher">
+        <button class="lang-switcher__btn active" data-lang="en">EN</button>
+        <button class="lang-switcher__btn" data-lang="ru">RU</button>
+        <button class="lang-switcher__btn" data-lang="uz">UZ</button>
+      </div>
     </div>
+
+    <!-- ── Hero ────────────────────────────────────────────────────────── -->
+    <section class="hero section" id="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="heading-xl hero__headline" data-i18n="hero.headline">
+            Hello! I'm <span class="italic">Zaha</span>.
+          </h1>
+          <p class="hero__tagline" data-i18n="hero.tagline">
+            Software engineer. Building the future and living the present.
+          </p>
+          <div class="hero__cta">
+            <a href="mailto:z@adhamov.com" class="btn btn--primary" data-i18n="hero.cta.primary">Get in touch</a>
+            <a href="#experience" class="btn btn--ghost" data-i18n="hero.cta.secondary">View experience</a>
+          </div>
+        </div>
+        <div class="hero__decor" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ── About ───────────────────────────────────────────────────────── -->
+    <section class="section" id="about">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2 class="heading-lg" data-i18n="about.title">About</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="text-body" data-i18n="about.bio.1">
+              Software engineer with experience across frontend development, testing infrastructure, and systems design. I enjoy building clean, performant products that people actually use.
+            </p>
+            <p class="text-body" data-i18n="about.bio.2">
+              Previously worked at Yandex, CVAT.AI, and Botkin.AI. Studied at HSE (Master's, HCI) and ITMO (Bachelor's, Information Security).
+            </p>
+          </div>
+          <div class="about__skills">
+            <div class="card">
+              <span class="card__icon" aria-hidden="true">&#9672;</span>
+              <div class="card__title" data-i18n="about.skill.frontend">Frontend</div>
+              <div class="card__desc" data-i18n="about.skill.frontend.desc">React, TypeScript, modern CSS, UI development</div>
+            </div>
+            <div class="card">
+              <span class="card__icon" aria-hidden="true">&#9670;</span>
+              <div class="card__title" data-i18n="about.skill.backend">Infrastructure</div>
+              <div class="card__desc" data-i18n="about.skill.backend.desc">CI/CD, testing frameworks, developer tooling</div>
+            </div>
+            <div class="card">
+              <span class="card__icon" aria-hidden="true">&#9674;</span>
+              <div class="card__title" data-i18n="about.skill.tools">Systems Design</div>
+              <div class="card__desc" data-i18n="about.skill.tools.desc">Architecture, data flows, scalable solutions</div>
+            </div>
+            <div class="card">
+              <span class="card__icon" aria-hidden="true">&#9656;</span>
+              <div class="card__title" data-i18n="about.skill.design">Data Visualization</div>
+              <div class="card__desc" data-i18n="about.skill.design.desc">Plotly, dashboards, visual analytics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience ──────────────────────────────────────────────────── -->
+    <section class="section" id="experience">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2 class="heading-lg" data-i18n="experience.title">Experience</h2>
+        </div>
+        <div class="experience__list" id="experience-list">
+          <!-- Rendered by main.js -->
+          <noscript>
+            <div class="exp-row">
+              <div class="exp-row__left">
+                <span class="exp-row__company">Timestripe</span>
+                <span class="exp-row__period text-sm">2022 — Present</span>
+              </div>
+              <div class="exp-row__right">
+                <span class="exp-row__role">Frontend Developer</span>
+                <span class="exp-row__desc text-sm">Building search, space management, backgrounds, video notifications.</span>
+              </div>
+            </div>
+            <div class="exp-row">
+              <div class="exp-row__left">
+                <span class="exp-row__company">Yandex</span>
+                <span class="exp-row__period text-sm">2023 — 2024</span>
+              </div>
+              <div class="exp-row__right">
+                <span class="exp-row__role">Software Engineer in Test</span>
+                <span class="exp-row__desc text-sm">Yango Fleet team. TypeScript autotests, CI/CD tooling.</span>
+              </div>
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projects ────────────────────────────────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2 class="heading-lg" data-i18n="projects.title">Projects</h2>
+          <a href="https://github.com/novda" target="_blank" rel="noopener noreferrer" class="section-header__link">
+            <span data-i18n="projects.viewall">View all</span> &rarr;
+          </a>
+        </div>
+        <div class="projects__list" id="projects-list">
+          <!-- Rendered by main.js -->
+          <noscript>
+            <a href="https://timestripe.com" class="project-row" target="_blank" rel="noopener noreferrer">
+              <div class="project-row__left">
+                <span class="tag">React</span>
+                <span class="project-row__title">Timestripe</span>
+              </div>
+              <span class="project-row__arrow">&nearr;</span>
+            </a>
+            <a href="https://github.com/novda" class="project-row" target="_blank" rel="noopener noreferrer">
+              <div class="project-row__left">
+                <span class="tag">Code</span>
+                <span class="project-row__title">GitHub Portfolio</span>
+              </div>
+              <span class="project-row__arrow">&nearr;</span>
+            </a>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ─────────────────────────────────────────────────────── -->
+    <section class="section contact" id="contact">
+      <div class="container reveal">
+        <h2 class="heading-lg contact__headline" data-i18n="contact.title">Let's connect</h2>
+        <p class="contact__subtext" data-i18n="contact.subtext">
+          Have a question or want to work together? Feel free to reach out.
+        </p>
+        <a href="mailto:z@adhamov.com" class="contact__email">z@adhamov.com</a>
+        <div class="social-links">
+          <a href="mailto:z@adhamov.com" class="social-link" aria-label="Email">
+            <span aria-hidden="true">&#9993;</span> <span data-i18n="contact.email">Email</span>
+          </a>
+          <a href="https://telegram.me/zahadhamov" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram">
+            <span aria-hidden="true">&#9992;</span> <span data-i18n="contact.telegram">Telegram</span>
+          </a>
+          <a href="https://github.com/novda" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <span aria-hidden="true">&#9998;</span> <span data-i18n="contact.github">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/zahadhamov/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <span aria-hidden="true">&#9741;</span> <span data-i18n="contact.linkedin">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Footer ──────────────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="footer__copy">&copy; 2024 Zaha</span>
+        <a href="#hero" class="footer__top"><span data-i18n="footer.top">Back to top</span> &uarr;</a>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/disco.js"></script>
   </body>
 </html>
